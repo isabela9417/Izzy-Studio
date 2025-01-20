@@ -1,260 +1,135 @@
-/* General Styles */
-img {
-    max-width: 100%;
-}
-
-#app {
-    width: 90%;
-    height: 85%;
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
 }
 
-.ui-big-images {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    display: flex;
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.ui-big-image {
-    width: 100%;
-    margin-right: -100%;
-}
-
-.ui-big-image img {
-    object-fit: cover;
-    object-position: center 20%;
-}
-
-@media (max-height: 600px) {
-    .ui-big-image img {
-        object-position: center center;
-    }
-}
-
-.ui-big-image img {
-    width: 100%;
-    height: 100%;
-    display: block;
-}
-
-.ui-thumbnails {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
+header {
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 20px 0;
+    position: fixed; 
+    top: 0;
     left: 0;
-    background-color: #fff;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 0 1rem;
-    padding-top: .5rem;
-    padding-right: 45%;
-    padding-right: calc( 45% + .5rem );
+    width: 100%; 
+    z-index: 100;
 }
 
-.ui-thumbnail {
-    display: block;
-    margin-right: .5rem;
-    padding: .5rem 0;
-    cursor: pointer;
+.logo {
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
 }
 
-.ui-cuticle {
-    background-color: #D4A12D;
-    position: absolute;
-    bottom: 0;
-    height: .25rem;
-    width: 100%;
+nav {
+    float: right;
 }
 
-.ui-thumbnail > img {
-    width: auto;
-}
-
-.ui-content {
-    position: absolute;
-    width: 40%;
-    right: 5%;
-    bottom: 0;
-}
-
-.ui-articles {
-    background: #493e56;
-    color: white;
-    display: flex;
-    align-items: stretch;
-    overflow: hidden;
-}
-
-.ui-article {
-    padding: 1.5rem;
-    width: 100%;
-    margin-right: -100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.ui-paragraph {
+nav ul {
+    list-style: none;
     margin: 0;
-    font-size: .7rem;
-    line-height: 1.7;
+    padding: 0;
 }
 
-.ui-nav {
-    position: absolute;
-    right: 0;
-    bottom: 100%;
-    background: inherit;
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
 }
 
-.ui-nav button {
-    background: #493e56;
-    border: none;
-    appearance: none;
-    padding: .5em;
-    width: 2em;
-    color: #FFF;
-    font-family: monospace;
-    transition: inherit;
-    transition-duration: 300ms;
+nav a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
 }
 
-.ui-nav button:hover,
-.ui-nav button:focus {
-    background: #D4A12D;
-    outline: none;
+nav a:hover {
+    color: #007bff;
 }
 
-.ui-nav button:active {
-    outline: none;
-    transform: translateY(.25em);
-    transition-duration: 100ms;
+.home {
+    position: relative;
+    min-height: 100vh; 
 }
 
-.ui-heading {
-    margin: 0;
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-    font-weight: normal;
-}
-
-.ui-heading:before {
-    content: 'Animator';
-    font-size: .5rem;
-    text-transform: uppercase;
-    display: block;
-    margin-bottom: .5rem;
-    letter-spacing: 1px;
-}
-
-/* ---------------------------------- */
-
-.ui-big-image {
-    opacity: 0;
-    transform: translateX(-100%);
-}
-
-.ui-big-image img {
-    transform: scale(0.85);
-}
-
-.ui-big-image[data-active] ~ .ui-big-image {
-    transform: translateX(100%);
-}
-
-.ui-big-image[data-active] {
-    opacity: 1;
-    transform: translateX(0%);
-}
-
-.ui-big-image[data-active] img {
-    transform: scale(1);
-}
-
-/* ---------------------------------- */
-
-.ui-article {
-    transform: translateX(-100%);
-}
-
-.ui-article:before {
-    content: '';
+.video-background {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #D4A12D;
-    opacity: 1;
-    transition-duration: .7s / 2;
-    z-index: 1;
+    overflow: hidden;
 }
 
-.ui-article[data-active] ~ .ui-article {
-    transform: translateX(100%);
-}
-
-.ui-article[data-active] {
-    transform: translateX(0%);
-}
-
-.ui-article[data-active]:before {
-    opacity: 0;
-}
-
-/* ---------------------------------- */
-
-.ui-thumbnail {
-    filter: grayscale(100%);
-    transition-duration: .7s / 2;
-}
-
-.ui-thumbnail:active {
-    transform: scale(0.9);
-    transition-duration: 100ms;
-}
-
-.ui-thumbnail:focus {
-    outline: none;
-}
-
-.ui-cuticle {
-    display: none;
-}
-
-.ui-thumbnail[data-active],
-.ui-thumbnail:hover {
-    filter: grayscale(0%);
-}
-
-.ui-thumbnail[data-active] .ui-cuticle {
-    display: block;
-}
-
-/* ---------------------------------- */
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #1A130C;
-}
-
-*, *:before, *:after {
-    box-sizing: border-box;
-    position: relative;
-    transition-property: transform, opacity, filter;
-    transition-duration: .7s, .7s, .7s;
-    transition-timing-function: cubic-bezier(.5, 0, .5, 1);
-}
-
-body, html {
-    height: 100%;
+#background-video {
     width: 100%;
-    padding: 0;
-    margin: 0;
+    height: auto;
+    object-fit: cover; 
+    animation: loopVideo 10s linear infinite; 
+}
+
+@keyframes loopVideo {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(0%); 
+    }
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+}
+
+.text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    color: #fff;
+    text-align: center;
+    background-color: transparent; 
+    padding: 0; 
+}
+
+.overlay-text h1 {
+    font-size: 4rem; 
+    margin-bottom: 1.5rem;
+}
+
+.overlay-text p {
+    font-size: 3rem;
+}
+/* section product */
+
+.products {
+    margin-top: 50px;
+  }
+  
+  .product-slider {
+    margin-bottom: 30px;
+  }
+  
+  .product-slider h3 {
+    margin-bottom: 15px;
+  }
+
+/* footer section  */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }

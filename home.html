@@ -1,102 +1,118 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE-edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/style.css">
-        <!-- social icons -->
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <!--swiper css-->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
-    </head>
-    <body>
-        <a href="https://youtu.be/DbwdbNi_QUk" target="_blank" data-keyframers-credit style="color: #FFF;"></a>
-        <script src="https://codepen.io/shshaw/pen/QmZYMG.js"></script>
-
-        <div id="app" data-state="0">
-        <div class="ui-big-images">    
-            <div class="ui-big-image" data-key="0">
-            <img src="images/1e3c2b885d63de54a324f09888c0225a.jpg" alt=""/>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liceria & Co.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="home.html">Izzy Anime Studio</a>
             </div>
-            <div class="ui-big-image" data-key="1">
-            <img src="images/260d8e50dec5164efefb2c80fa641cb6.jpg" alt=""/>
-            </div>
-            <div class="ui-big-image" data-key="2">
-            <img src="images/2cda2a29621007c7736c1e97cc93aad8.jpg" alt=""/>
-            </div>
-            <div class="ui-big-image" data-key="3">
-            <img src="images/68a7666696a707f63f3128ddd16848c6.jpg" alt=""/>
-            </div>
-            <div class="ui-big-image" data-key="4">
-            <img src="images/6d543e3037e63110d8da4cc05fc339b2.jpg" alt=""/>
-            </div>
-            <div class="ui-big-image" data-key="5">
-            <img src="images/6f8cd1f6efa7a88602179aeabe629189.jpg" alt=""/>
-            </div>
-        </div>
-        <div class="ui-thumbnails">
-            <div class="ui-thumbnail" tabindex="-1" data-key="0">
-            <img src="images/1e3c2b885d63de54a324f09888c0225a.jpg" alt="" />
-            <div class="ui-cuticle" data-flip-key="cuticle"></div>
-            </div>
-            <div class="ui-thumbnail" tabindex="-1" data-key="1">
-            <img src="images/260d8e50dec5164efefb2c80fa641cb6.jpg" alt="" />
-            <div class="ui-cuticle" data-flip-key="cuticle"></div>
-            </div>
-            <div class="ui-thumbnail" tabindex="-1" data-key="2">
-            <img src="images/2cda2a29621007c7736c1e97cc93aad8.jpg" alt="" />
-            <div class="ui-cuticle" data-flip-key="cuticle"></div>
-            </div>
-            <div class="ui-thumbnail" tabindex="-1" data-key="3">
-            <img src="images/68a7666696a707f63f3128ddd16848c6.jpg" alt=""/>
-            <div class="ui-cuticle" data-flip-key="cuticle"></div>
-            </div>
-            <div class="ui-thumbnail" tabindex="-1" data-key="4">
-            <img src="images/6d543e3037e63110d8da4cc05fc339b2.jpg" alt="" />
-            <div class="ui-cuticle" data-flip-key="cuticle"></div>
-            </div>
-            <div class="ui-thumbnail" tabindex="-1" data-key="5">
-            <img src="images/6f8cd1f6efa7a88602179aeabe629189.jpg" alt="" />
-            <div class="ui-cuticle" data-flip-key="cuticle"></div>
-            </div>
-        </div>
-        <div class="ui-content">
-            
-            <nav class="ui-nav">
-            <button id="prev" tabindex="-1" title="Previous">&lt;</button>
-            <button id="next" tabindex="-1" title="Next">&gt;</button>
+            <nav>
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#product">PRODUCTS</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
             </nav>
-            
-            <div class="ui-articles">
-            <article class="ui-article" data-key="0">
-                <h2 class="ui-heading">Stephen Shaw</h2>
-                <p class="ui-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae cupiditate assumenda nemo delectus totam atque quas suscipit dicta.</p>
-            </article>
-            <article class="ui-article" data-key="1">
-                <h2 class="ui-heading">David Khourshid</h2>
-                <p class="ui-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod sapiente soluta iusto molestias ullam. </p>
-            </article>
-            <article class="ui-article" data-key="2">
-                <h2 class="ui-heading">Coding Compadre</h2>
-                <p class="ui-paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
-            </article>
-            <article class="ui-article" data-key="3">
-                <h2 class="ui-heading">Boolean Buddy</h2>
-                <p class="ui-paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
-            </article>
-            <article class="ui-article" data-key="4">
-                <h2 class="ui-heading">Animation Amigo</h2>
-                <p class="ui-paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias exercitationem voluptatibus</p>
-            </article>
-            <article class="ui-article" data-key="5">
-                <h2 class="ui-heading">Keyframe Companion</h2>
-                <p class="ui-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae soluta reprehenderit, ut doloribus corrupti</p>
-            </article>
+        </div>
+    </header>
+    <section id="home" class="home">
+        <div class="video-background">
+            <video autoplay muted loop id="background-video">
+                <source src="videos/ALL SUKUNA CLIPS FOR EDITING .mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="overlay">
+                <div class="text-container">
+                    <h1>Welcome to Izzy Anime Studio</h1>
+                    <p>Get your shirt, hoodie or sweater customized with your favourite anime character</p>
+                </div>
             </div>
         </div>
+    </section>
+    <!-- about section -->
+    <section id="product" class="product">
+        <section class="products">
+            <h2>Our Products</h2>
+          
+            <div class="product-slider">
+              <h3>Shoes</h3>
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="images/shoes/1a4db9a5d8a79bf3f0f7fe0a9d6e36f2.jpg" alt="Shoe 1"></div>
+                  <div class="swiper-slide"><img src="images/shoes/33830e12584c2cd6f4bd49860e2956d4.jpg" alt="Shoe 2"></div>
+                  <div class="swiper-slide"><img src="images/shoes/7a8b1dc12eff323f809fb75a7b74b982.jpg" alt="Shoe 3"></div>
+                  <div class="swiper-slide"><img src="images/shoes/d3e38da596c21b37c7a7ba7d828983b0.jpg" alt="Shoe 3"></div>
+                  <div class="swiper-slide"><img src="images/shoes/e67eb000d8f8bb6f41d4ae0794744b7f.jpg" alt="Shoe 3"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          
+            <div class="product-slider">
+              <h3>Shirts</h3>
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="images/shirts/6f8cd1f6efa7a88602179aeabe629189.jpg" alt="Shirt 1"></div>
+                  <div class="swiper-slide"><img src="images/shirts/6d543e3037e63110d8da4cc05fc339b2.jpg" alt="Shirt 2"></div>
+                  <div class="swiper-slide"><img src="images/shirts/a49746db622bc47b359f3f844846dab2.jpg" alt="Shirt 3"></div>
+                  <div class="swiper-slide"><img src="images/shirts/b4bed76a577e66ef6523eab97c12ba32.jpg" alt="Shirt 2"></div>
+                  <div class="swiper-slide"><img src="images/shirts/a0c7d05d17651e80e0c5c5d8d1626347.jpg" alt="Shirt 3"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          
+            <div class="product-slider">
+              <h3>Hoodies</h3>
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="images/hoodies/1e3c2b885d63de54a324f09888c0225a.jpg" alt="Hoodie 1"></div>
+                  <div class="swiper-slide"><img src="images/hoodies/260d8e50dec5164efefb2c80fa641cb6.jpg" alt="Hoodie 2"></div>
+                  <div class="swiper-slide"><img src="images/hoodies/51RWB+U3GtL._AC_UY1000_.jpg" alt="Hoodie 3"></div>
+                  <div class="swiper-slide"><img src="images/hoodies/68a7666696a707f63f3128ddd16848c6.jpg" alt="Hoodie 2"></div>
+                  <div class="swiper-slide"><img src="images/hoodies/animehoodiesformen_1200x1200.webp" alt="Hoodie 3"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          
+            <div class="product-slider">
+              <h3>Sweaters</h3>
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="images/hoodies/sweater1.jpg" alt="Sweater 1"></div>
+                  <div class="swiper-slide"><img src="images/hoodies/images.jpg" alt="Sweater 2"></div>
+                  <div class="swiper-slide"><img src="images/hoodies/images (1).jpg" alt="Sweater 3"></div>
+                  <div class="swiper-slide"><img src="images/hoodies/photobank_3_253b708e-6bf2-4980-bb36-570ed9764508.webp" alt="Sweater 2"></div>
+                  <div class="swiper-slide"><img src="images/hoodies/71X2tJBf15L._AC_UY1000_.jpg" alt="Sweater 2"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          
+          </section>
+    </section>
+
+    <!-- about section -->
+    <section id="about" class="about"> 
+        </section>
+    <!-- contact section -->
+    <section id="contact" class="contact"> 
+        </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Isabela Tlhakudi All Rights Reserved.</p>
         </div>
-         <!-- Javascript -->
-      <script src="javascript/javascript.js"></script>
-    </body>
+    </footer>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="Javascript/script.js"></script>
+</body>
 </html>
