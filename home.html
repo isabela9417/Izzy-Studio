@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/slider.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
@@ -17,17 +19,17 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#product">PRODUCTS</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <!-- <li><a href="#contact">CONTACT</a></li> -->
+                <li><a href="#home">Home</a></li>
+                <li><a href="#product">Product</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
 <section id="home" class="home">
-    <div class="image-slider">
+    <div class="home-slider">
         <img src="images/background/Screenshot (23).png" alt="Anime Image 1" class="slide fade">
         <img src="images/background/Screenshot (35).png" alt="Anime Image 2" class="slide fade">
         <img src="images/background/Screenshot (41).png" alt="Anime Image 3" class="slide fade">
@@ -41,92 +43,113 @@
         </div>
     </div>
 </section>
+<br><br><br>
+<!-- about section -->
+<section class="product" id="product">
+    <div class="product-container">
+        <img src="/images/background/Shinobu-PNG-Isolated-Image.png" alt="">
+        <h2 class="heading">Featured Products</h2>
+        <br><br><br><br>
+        <!-- Shirt Products Section -->
+        <h2 class="heading">Shirts</h2>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="images/shirts/6f8cd1f6efa7a88602179aeabe629189.jpg" alt="Shirt 1">
+            </div>
+            <div class="product-item">
+                <img src="images/shirts/6d543e3037e63110d8da4cc05fc339b2.jpg" alt="Shirt 2">
+            </div>
+            <div class="product-item">
+                <img src="images/shirts/a49746db622bc47b359f3f844846dab2.jpg" alt="Shirt 3">
+            </div>
+            <div class="product-item">
+                <img src="images/shirts/b4bed76a577e66ef6523eab97c12ba32.jpg" alt="Shirt 4">
+            </div>
+            <div class="product-item">
+                <img src="images/shirts/a0c7d05d17651e80e0c5c5d8d1626347.jpg" alt="Shirt 5">
+            </div>
+            <div class="product-item">
+                <img src="images/shirts/fd0d04046414c751ad5b34927d3473d2.jpg" alt="Shirt 5">
+            </div>
+            <div class="product-item">
+                <img src="images/shirts/c8eb7f7cabee69bc7e7deb987ec835d6.jpg" alt="Shirt 5">
+            </div>
+        </div>
 
-    <!-- about section -->
+        <br><br><br><br><br><br><br><br>
 
-    <section class="product" id="product">
- 
-      <div class="product-container">
-          <h2 class="heading">Featured Products</h2>
-          <br><br>
-          <div class="product-wrapper">
-              <div class="product-box mySwiper">
-                  <div class="product-content swiper-wrapper">
-                      <!-- Shirt Products -->
-                      <div class="product-slide swiper-slide">
-                          <img src="images/shirts/6f8cd1f6efa7a88602179aeabe629189.jpg" alt="Shirt 1">
-                      </div>
-                      <div class="product-slide swiper-slide">
-                          <img src="images/shirts/6d543e3037e63110d8da4cc05fc339b2.jpg" alt="Shirt 2">
-                      </div>
-                      <div class="product-slide swiper-slide">
-                          <img src="images/shirts/a49746db622bc47b359f3f844846dab2.jpg" alt="Shirt 3">
-                      </div>
-                      <div class="product-slide swiper-slide">
-                          <img src="images/shirts/b4bed76a577e66ef6523eab97c12ba32.jpg" alt="Shirt 4">
-                      </div>
-                      <div class="product-slide swiper-slide">
-                          <img src="images/shirts/a0c7d05d17651e80e0c5c5d8d1626347.jpg" alt="Shirt 5">
-                      </div>
-  
-                      <!-- Hoodie Products -->
-                      <div class="product-slide swiper-slide">
-                          <img src="images/hoodies/1e3c2b885d63de54a324f09888c0225a.jpg" alt="Hoodie 1">
-                      </div>
-                      <div class="product-slide swiper-slide">
-                          <img src="images/hoodies/260d8e50dec5164efefb2c80fa641cb6.jpg" alt="Hoodie 2">
-                      </div>
-                      <div class="product-slide swiper-slide">
-                          <img src="images/hoodies/images (7).jpg" alt="Hoodie 3">
-                      </div>
-                      <div class="product-slide swiper-slide">
-                          <img src="images/hoodies/68a7666696a707f63f3128ddd16848c6.jpg" alt="Hoodie 4">
-                      </div>
-                      <div class="product-slide swiper-slide">
-                          <img src="images/hoodies/animehoodiesformen_1200x1200.webp" alt="Hoodie 5">
-                      </div>
-  
-                      <!-- Sweater Products -->
-                      <div class="product-slide swiper-slide">
-                          <img src="images/hoodies/sweater1.jpg" alt="Sweater 1">
-                      </div>
-                      <div class="product-slide swiper-slide">
-                          <img src="images/hoodies/images.jpg" alt="Sweater 2">
-                      </div>
-                      <div class="product-slide swiper-slide">
-                          <img src="images/hoodies/images (1).jpg" alt="Sweater 3">
-                      </div>
-                      <div class="product-slide swiper-slide">
-                          <img src="images/hoodies/photobank_3_253b708e-6bf2-4980-bb36-570ed9764508.webp" alt="Sweater 4">
-                      </div>
-                      <div class="product-slide swiper-slide">
-                          <img src="images/hoodies/71X2tJBf15L._AC_UY1000_.jpg" alt="Sweater 5">
-                      </div>
-                  </div>
-  
-                  <div class="swiper-button-next"></div>
-                  <div class="swiper-button-prev"></div>
-                  <div class="swiper-pagination"></div>
-              </div>
-          </div>
-      </div>
-  </section>
-  
-  <!-- about section -->
-  <section id="about" class="about" class="about-section">
-      <h2 class="heading">About Izzy Studio</h2>
-      <br><br>
-      <div class="about-content">
-          <img src="images/background/dgfwzzo-fba75407-44b4-4180-8eb7-71034921e5f0.png" alt="Anime Characters" class="left-image">
-          <div class="text-content">
-              <p>At Izzy Studio, we bring your favorite anime characters to life through high-quality printed shirts, hoodies, and sweater hoodies. Whether you're a die-hard fan or a casual enthusiast, our unique designs are crafted to help you express your love for anime in style.</p>
-              <br><br>
-              <p>Our mission is to create apparel that not only looks amazing but also resonates with the vibrant anime community. From iconic classics to trending series, we've got something for everyone.</p>
-          </div>
-            <img src="images/background/deku.jpg" alt="Anime Characters" class="right-image">
-            <br><br><br><br><br><br><br><br>
-      </div>
-  </section>
+        <!-- Hoodie Products Section -->
+        <h2 class="heading">Hoodies</h2>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="images/hoodies/1e3c2b885d63de54a324f09888c0225a.jpg" alt="Hoodie 1">
+            </div>
+            <div class="product-item">
+                <img src="images/hoodies/260d8e50dec5164efefb2c80fa641cb6.jpg" alt="Hoodie 2">
+            </div>
+            <div class="product-item">
+                <img src="images/hoodies/images (7).jpg" alt="Hoodie 3">
+            </div>
+            <div class="product-item">
+                <img src="images/hoodies/51RWB+U3GtL._AC_UY1000_.jpg" alt="Hoodie 4">
+            </div>
+            <div class="product-item">
+                <img src="images/hoodies/animehoodiesformen_1200x1200.webp" alt="Hoodie 5">
+            </div>
+            <div class="product-item">
+                <img src="images/hoodies/images (2).jpg" alt="Hoodie 6">
+            </div>
+            <div class="product-item">
+                <img src="images/hoodies/images (3).jpg" alt="Hoodie 7">
+            </div>
+        </div>
+
+        <br><br><br><br><br><br>
+
+        <!-- Sweater Products Section -->
+        <h2 class="heading">Hoodie Sweaters</h2>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="images/hoodie sweater/sweater4.jpg" alt="Sweater 1">
+            </div>
+            <div class="product-item">
+                <img src="images//hoodie sweater/images (1).jpg" alt="Sweater 2">
+            </div>
+            <div class="product-item">
+                <img src="images/hoodie sweater/download.jpg" alt="Sweater 3">
+            </div>
+            <div class="product-item">
+                <img src="images/hoodie sweater/sweater2.gif" alt="Sweater 4">
+            </div>
+            <div class="product-item">
+                <img src="images/hoodie sweater/68a7666696a707f63f3128ddd16848c6.jpg" alt="Sweater 5">
+            </div>
+            <div class="product-item">
+                <img src="images/hoodie sweater/images (3).jpg" alt="Sweater 6">
+            </div>
+            <div class="product-item">
+                <img src="images/hoodie sweater/images (4).jpg" alt="Sweater 7">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+ <!-- about section -->
+ <section id="about" class="about" class="about-section">
+    <h2 class="heading">About Izzy Studio</h2>
+    <br><br>
+    <div class="about-content">
+        <img src="images/background/dgfwzzo-fba75407-44b4-4180-8eb7-71034921e5f0.png" alt="Anime Characters" class="left-image">
+        <div class="text-content">
+            <p>At Izzy Studio, we bring your favorite anime characters to life through high-quality printed shirts, hoodies, and sweater hoodies. Whether you're a die-hard fan or a casual enthusiast, our unique designs are crafted to help you express your love for anime in style.</p>
+            <br><br>
+            <p>Our mission is to create apparel that not only looks amazing but also resonates with the vibrant anime community. From iconic classics to trending series, we've got something for everyone.</p>
+        </div>
+          <img src="images/background/deku.jpg" alt="Anime Characters" class="right-image">
+          <br><br><br><br><br><br><br><br>
+    </div>
+</section>
 
 
 <!-- Footer Section -->
@@ -142,6 +165,8 @@
   </div>
 </footer>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <script src="Javascript/script.js"></script>
 </body>
 </html>
