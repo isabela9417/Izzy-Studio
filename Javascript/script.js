@@ -18,42 +18,34 @@ function showSlides() {
 showSlides();
 
 
-// the product slider
-// Initialize the Shirts Swiper
-const swiperShirts = new Swiper('.mySwiperShirts', {
-  direction: 'horizontal',
-  loop: true,
-  pagination: {
-    el: '.swiper-pagination',
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+// Get the header element
+const header = document.querySelector('header');
+
+// Add an event listener to monitor the scroll event
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {  
+        header.classList.add('scrolled'); 
+    } else {
+        header.classList.remove('scrolled'); 
+    }
 });
 
-// Initialize the Hoodies Swiper
-const swiperHoodies = new Swiper('.mySwiperHoodies', {
-  direction: 'horizontal',
-  loop: true,
-  pagination: {
-    el: '.swiper-pagination',
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-});
 
-// Initialize the Sweaters Swiper
-const swiperSweaters = new Swiper('.mySwiperSweaters', {
-  direction: 'horizontal',
-  loop: true,
-  pagination: {
-    el: '.swiper-pagination',
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+/*============== menu icon navbar ==============*/
+
+var menuIcon = document.querySelector("#menu-icon");
+var navBar = document.querySelector(".navBar");
+
+menuIcon.onclick = () => {
+  menuIcon.classList.toggle("bx-x");
+  navBar.classList.toggle("active");
+};
+
+var menuItems = document.querySelectorAll(".navBar li"); 
+
+menuItems.forEach(item => {
+  item.onclick = () => {
+    navBar.classList.remove("active"); 
+    menuIcon.classList.remove("bx-x");
+  };
 });

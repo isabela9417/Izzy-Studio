@@ -13,13 +13,28 @@ body {
 }
 
 header {
-    background-color: rgba(255, 255, 255, 0.8); 
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 20px 0;
     position: fixed; 
     top: 0;
     left: 0;
     width: 100%; 
     z-index: 100;
+    transition: backdrop-filter 0.3s ease; 
+    
+}
+
+
+header.scrolled {
+    backdrop-filter: blur(5px); 
+
+}
+
+#menu-icon {
+    font-size: 2.6rem;
+    color: var(--text-color);
+    display: none;
+    cursor: pointer;
 }
 
 .logo {
@@ -29,8 +44,45 @@ header {
     text-decoration: none;
 }
 
+.navBar {
+    display: flex;
+    justify-content: flex-end;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navBar ul {
+    display: flex;
+    gap: 20px;
+}
+
+.navBar.active {
+    display: block;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    padding: 20px 0;
+}
+
+.navBar.active ul {
+    display: block;
+    text-align: center;
+}
+
+.navBar.active ul li {
+    margin: 10px 0;
+}
+
+.navBar.active ul li a {
+    font-size: 1.5rem;
+    color: #333;
+}
+
 nav {
     float: right;
+    display: block;
 }
 
 nav ul {
@@ -66,11 +118,6 @@ nav a:hover {
     position: relative;
     width: 100%;
     height: 100%;
-    
-}
-
-.next-arrow, .prev-arrow {
-    display: none;
 }
 
 .home-slider .slide {
@@ -78,8 +125,6 @@ nav a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
 }
 
 .home-slider .fade {
@@ -100,28 +145,35 @@ nav a:hover {
     text-align: center;
 }
 
+.text-container {
+    text-align: center; 
+    padding: 20px; 
+}
+
 .text-container h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 20px;
+    font-size: 2rem; 
+    margin-bottom: 10px;
 }
 
 .text-container p {
-    font-size: 1.25rem;
-    max-width: 600px;
-    margin: 0 auto;
+    font-size: 1rem; 
+    max-width: 90%; 
+    margin: 0 auto; 
+    line-height: 1.4; 
 }
 
 /* product section style */
 .product {
-    padding: 50px 0;
+    padding: 50px 15px;
 }
 
 .product-container {
-    width: 90%;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
     text-align: center;
-    position: relative; 
+    position: relative;
+    
 }
 
 .watermark-container {
@@ -214,9 +266,6 @@ nav a:hover {
     margin-bottom: 30px;
     text-align: center;
 }
-
-
-
 
 /* About section content layout */
 .container {
@@ -313,6 +362,7 @@ nav a:hover {
     background-color: rgba(255, 255, 255, 0.9); 
     padding: 3rem;
     border-radius: 8px;
+    border-left: 20rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -415,131 +465,216 @@ footer p {
 }
 
 
-
 /* Media Queries for Responsiveness */
 
-@media (max-width: 768px) {
-    .container {
-        padding: 0 10px; 
+@media screen and (max-width: 768px) {
+    header {
+        padding: 15px 0;
+        flex-direction: column; 
+        align-items: center; 
     }
 
     .logo {
-        float: none; 
-        text-align: center;
-        margin-bottom: 10px;
+        margin: 10px 0; 
+        text-align: center; 
     }
 
-    nav {
-        float: none;
+    #menu-icon {
+        margin: 10px 0; 
+        font-size: 2rem; 
+    }
+
+    .navBar {
+        width: 100%; 
+    }
+
+    .navBar.active {
+        top: 65px; 
+        left: 0;
+        text-align: center; 
+        padding: 10px 0; 
+    }
+
+    .navBar.active ul {
+        display: block;
+    }
+
+    .navBar.active ul li {
+        margin: 10px 0;
+    }
+
+    .navBar.active ul li a {
+        font-size: 1.2rem;
+    }
+    .contact-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .product-container {
+        padding: 0 10px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-image,
+    .right-image {
+        width: 80%;
+        margin: 10px 0;
+    }
+
+    .footer-container {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        padding: 10px 0;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .product .heading,
+    .contact .heading,
+    .about .heading {
+        font-size: 2rem;
+    }
+
+    .navBar.active {
+        top: 95px; /* Adjust top position */
+    }
+
+    nav ul {
         text-align: center;
     }
 
     nav ul li {
-        display: block; 
-        margin: 10px 0;
+        display: block;
+        margin-left: 0;
+        margin-top: 10px;
     }
 
-    .text-container h1 {
-        font-size: 2rem; 
+    /* Contact Form */
+    .contact-form {
+        padding: 2rem;
     }
 
-    .text-container p {
-        font-size: 1rem; 
+    .contact-form label {
+        font-size: 1rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 8px;
+    }
+
+    .contact-form button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .product-info {
+        font-size: 1rem;
+    }
+}@media screen and (max-width: 768px) {
+
+    header {
+        padding: 15px 0;
+    }
+
+    .logo {
+        font-size: 20px;
+        padding-right: 10px;
+    }
+    nav {
+        display: none; 
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    .contact-content {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .product-grid {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
     }
 
-    .left-image, .right-image, .bottom-right-image {
-        width: 90%; 
-        max-width: 100%; 
-        margin: 10px 0;
-        padding: 0;
-    }
-    .about-content{
-        flex-direction: column;
+    .product-container {
+        padding: 0 10px;
     }
 
-    .text-content {
-        width: 95%;
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-image, .right-image {
+        width: 80%; 
+        margin: 10px 0;
+    }
+
+    .footer-container {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    header {
+        padding: 10px 0;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .product .heading, .contact .heading, .about .heading {
+        font-size: 2rem;
+    }
+
+    nav ul {
         text-align: center;
     }
 
-    .contact-content {
-        flex-direction: column; 
+    nav ul li {
+        display: block;
+        margin-left: 0;
+        margin-top: 10px;
     }
 
+    /* Contact Form */
     .contact-form {
-        width: 95%; 
-        margin-bottom: 20px;
+        padding: 2rem;
     }
 
-    .contact-image {
-        margin-bottom: 0;
-        width: 95%;
-    }
-
-    .contact-image img {
-        width: 100%;
-    }
-    .about-section{
-        padding: 20px 0;
-    }
-    .about .heading{
-        font-size: 2rem;
-    }
-    .about p{
+    .contact-form label {
         font-size: 1rem;
     }
-    .product .heading{
-        font-size: 2rem;
-    }
-    .price{
-        font-size: 1.2rem;
-    }
-    footer p{
-        font-size: 0.9rem;
-    }
-    .social-icons{
-        font-size: 1.5rem;
-    }
-    .social-icon{
-        font-size: 25px;
-    }
-}
 
-@media (min-width: 769px) and (max-width: 992px) {
-    .product-grid {
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
-    }
-    .left-image, .right-image, .bottom-right-image {
-        width: 90%; 
-        max-width: 100%; 
-        margin: 10px 0;
-        padding: 0;
-    }
-    .about-content{
-        flex-direction: column;
+    .contact-form input, .contact-form textarea {
+        padding: 8px;
     }
 
-    .text-content {
-        width: 90%;
-        text-align: center;
+    .contact-form button {
+        font-size: 1rem;
+        padding: 8px 16px;
     }
-}
 
-@media (min-width: 993px) {
-        .left-image, .right-image, .bottom-right-image {
-            width: 40%; 
-            max-width: 100%; 
-            padding-top: 25rem;
-        }
-        .about-content{
-            flex-direction: row;
-        }
-        .text-content {
-            width: 55%;
-            text-align: left;
-        }
+    .product-info {
+        font-size: 1rem;
+    }
 }
