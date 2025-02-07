@@ -5,37 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Izzy Studio</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/slider.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-  <header>
-    <div class="container">
-        <div class="logo" >
-            <a href="home.html">Izzy Studio</a>
-        </div>
+    <header class="header">
+        <a href="#home" class="logo">Izzy Devs'<span class="headingSpan"> Portfolio</span></a>
+
         <nav class="navBar">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#product">Product</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+          <a href="#home" class="active">Home</a>
+          <a href="#product">Product</a>
+          <a href="#about">About Us</a>
+          <a href="#contact">Contact Us</a>
+         
         </nav>
         <div class="bx bx-menu" id="menu-icon"></div>
-    </div>
-</header>
+  </header>
 
 <section id="home" class="home">
     <div class="home-slider">
-        <img src="images/background/Screenshot (23).png" alt="Anime Image 1" class="slide fade">
-        <img src="images/background/Screenshot (35).png" alt="Anime Image 2" class="slide fade">
-        <img src="images/background/Screenshot (41).png" alt="Anime Image 3" class="slide fade">
-        <img src="images/background/Screenshot (42).png" alt="Anime Image 4" class="slide fade">
-        <img src="images/background/Screenshot (43).png" alt="Anime Image 5" class="slide fade">
+        <img src="images/background/Screenshot (23).png" alt="Anime Image 1" class="slide fade img-fluid">
+        <img src="images/background/Screenshot (35).png" alt="Anime Image 2" class="slide fade img-fluid">
+        <img src="images/background/Screenshot (41).png" alt="Anime Image 3" class="slide fade img-fluid">
+        <img src="images/background/Screenshot (42).png" alt="Anime Image 4" class="slide fade img-fluid">
+        <img src="images/background/Screenshot (43).png" alt="Anime Image 5" class="slide fade img-fluid">
     </div>
     <div class="overlay">
         <div class="text-container">
@@ -44,175 +40,174 @@
         </div>
     </div>
 </section>
-<br><br><br>
-<!-- product section -->
-<section class="product" id="product">
-    <div class="product-container">
-        <div class="watermark-container featured-watermark">
-            <img src="/images/background/6764c596f3fe9e6423e0f066c45bd514.jpg" alt="Featured Watermark">
+
+<!-- Product Section -->
+<section class="product py-5" id="product">
+    <div class="container">
+        <div class="watermark-container mb-4 mt-15">
+            <img src="/images/background/6764c596f3fe9e6423e0f066c45bd514.jpg" alt="Featured Watermark" class="img-fluid">
         </div>
-        <h2 class="heading">Featured Products</h2>
-        <br><br><br><br>
+        <br><br>
+        <h2 class="heading text-center mb-4">Featured Products</h2>
+
         <!-- Shirt Products Section -->
-        <h2 class="heading">Shirts</h2>
-        <br><br><br>
-        <div class="product-grid">
-            <div class="product-item">
-                <img src="images/shirts/6f8cd1f6efa7a88602179aeabe629189.jpg" alt="Shirt 1">
-                <div class="product-info">
-                    <p class="price">R300</p>
-                    <p class="colors">Color: Black, White, Grey and other</p>
+        <h2 class="heading text-center mb-4 mt-10">Shirts</h2>
+        <div class="row">
+            <div class="col-12 col-md-3 mb-4">
+                <div class="product-item">
+                    <img src="images/shirts/6f8cd1f6efa7a88602179aeabe629189.jpg" alt="Shirt 1" class="img-fluid">
+                    <div class="product-info">
+                        <p class="price">R300</p>
+                        <p class="colors">Color: Black, White, Grey and other</p>
+                    </div>
                 </div>
             </div>
-            <div class="product-item">
-                <img src="images/shirts/6d543e3037e63110d8da4cc05fc339b2.jpg" alt="Shirt 2">
-                <div class="product-info">
-                    <p class="price">R300</p>
-                    <p class="colors">Color: Black, White, Grey and other</p>
+            <div class="col-12 col-md-3 mb-4">
+                <div class="product-item">
+                    <img src="images/shirts/6d543e3037e63110d8da4cc05fc339b2.jpg" alt="Shirt 2" class="img-fluid">
+                    <div class="product-info">
+                        <p class="price">R300</p>
+                        <p class="colors">Color: Black, White, Grey and other</p>
+                    </div>
                 </div>
             </div>
-            <div class="product-item">
-                <img src="images/shirts/a49746db622bc47b359f3f844846dab2.jpg" alt="Shirt 3">
-                <div class="product-info">
-                    <p class="price">R300</p>
-                    <p class="colors">Color: Black, White, Grey and other</p>
+            <div class="col-12 col-md-3 mb-4">
+                <div class="product-item">
+                    <img src="images/shirts/a49746db622bc47b359f3f844846dab2.jpg" alt="Shirt 3" class="img-fluid">
+                    <div class="product-info">
+                        <p class="price">R300</p>
+                        <p class="colors">Color: Black, White, Grey and other</p>
+                    </div>
                 </div>
             </div>
-            <div class="product-item">
-                <img src="images/shirts/b4bed76a577e66ef6523eab97c12ba32.jpg" alt="Shirt 4">
-                <div class="product-info">
-                    <p class="price">R300</p>
-                    <p class="colors">Color: Black, White, Grey and other</p>
-                </div>
-            </div>
-            <div class="product-item">
-                <img src="images/shirts/a0c7d05d17651e80e0c5c5d8d1626347.jpg" alt="Shirt 5">
-                <div class="product-info">
-                    <p class="price">R300</p>
-                    <p class="colors">Color: Black, White, Grey and other</p>
+            <div class="col-12 col-md-3 mb-4">
+                <div class="product-item">
+                    <img src="images/shirts/a49746db622bc47b359f3f844846dab2.jpg" alt="Shirt 3" class="img-fluid">
+                    <div class="product-info">
+                        <p class="price">R300</p>
+                        <p class="colors">Color: Black, White, Grey and other</p>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <br><br><br><br>
         <!-- Hoodie Products Section -->
-        <h2 class="heading">Hoodies</h2>
-        <br><br><br>
-        <div class="product-grid">
-            <div class="product-item">
-                <img src="images/hoodies/1e3c2b885d63de54a324f09888c0225a.jpg" alt="Hoodie 1">
-                <div class="product-info">
-                    <p class="price">R400</p>
-                    <p class="colors">Color: Black, White, Grey and other</p>
+        <h2 class="heading text-center mb-10">Hoodies</h2>
+        <div class="row">
+            <div class="col-12 col-md-3 mb-4">
+                <div class="product-item">
+                    <img src="images/hoodies/1e3c2b885d63de54a324f09888c0225a.jpg" alt="Hoodie 1" class="img-fluid">
+                    <div class="product-info">
+                        <p class="price">R400</p>
+                        <p class="colors">Color: Black, White, Grey and other</p>
+                    </div>
                 </div>
             </div>
-            <div class="product-item">
-                <img src="images/hoodies/260d8e50dec5164efefb2c80fa641cb6.jpg" alt="Hoodie 2">
-                <div class="product-info">
-                    <p class="price">R400</p>
-                    <p class="colors">Color: Black, White, Grey and other</p>
+            <div class="col-12 col-md-3 mb-4">
+                <div class="product-item">
+                    <img src="images/hoodies/1e3c2b885d63de54a324f09888c0225a.jpg" alt="Hoodie 1" class="img-fluid">
+                    <div class="product-info">
+                        <p class="price">R400</p>
+                        <p class="colors">Color: Black, White, Grey and other</p>
+                    </div>
                 </div>
             </div>
-            <div class="product-item">
-                <img src="images/hoodies/images (7).jpg" alt="Hoodie 3">
-                <div class="product-info">
-                    <p class="price">R400</p>
-                    <p class="colors">Color: Black, White, Grey and other</p>
+            <div class="col-12 col-md-3 mb-4">
+                <div class="product-item">
+                    <img src="images/hoodies/1e3c2b885d63de54a324f09888c0225a.jpg" alt="Hoodie 1" class="img-fluid">
+                    <div class="product-info">
+                        <p class="price">R400</p>
+                        <p class="colors">Color: Black, White, Grey and other</p>
+                    </div>
                 </div>
             </div>
-            <div class="product-item">
-                <img src="images/hoodies/51RWB+U3GtL._AC_UY1000_.jpg" alt="Hoodie 4">
-                <div class="product-info">
-                    <p class="price">R400</p>
-                    <p class="colors">Available Colors: Black, White, Grey and other</p>
+            <div class="col-12 col-md-3 mb-4">
+                <div class="product-item">
+                    <img src="images/hoodies/1e3c2b885d63de54a324f09888c0225a.jpg" alt="Hoodie 1" class="img-fluid">
+                    <div class="product-info">
+                        <p class="price">R400</p>
+                        <p class="colors">Color: Black, White, Grey and other</p>
+                    </div>
                 </div>
             </div>
-            <div class="product-item">
-                <img src="images/hoodies/animehoodiesformen_1200x1200.webp" alt="Hoodie 5">
-                <div class="product-info">
-                    <p class="price">R400</p>
-                    <p class="colors">Color: Black, White, Grey and other</p>
+            <div class="col-12 col-md-3 mb-4">
+                <div class="product-item">
+                    <img src="images/hoodies/1e3c2b885d63de54a324f09888c0225a.jpg" alt="Hoodie 1" class="img-fluid">
+                    <div class="product-info">
+                        <p class="price">R400</p>
+                        <p class="colors">Color: Black, White, Grey and other</p>
+                    </div>
                 </div>
             </div>
-            <div class="product-item">
-                <img src="images/hoodies/images.jpg" alt="Hoodie 5">
-                <div class="product-info">
-                    <p class="price">R400</p>
-                    <p class="colors">Color: Black, White, Grey and other</p>
+            <div class="col-12 col-md-3 mb-4">
+                <div class="product-item">
+                    <img src="images/hoodies/1e3c2b885d63de54a324f09888c0225a.jpg" alt="Hoodie 1" class="img-fluid">
+                    <div class="product-info">
+                        <p class="price">R400</p>
+                        <p class="colors">Color: Black, White, Grey and other</p>
+                    </div>
                 </div>
             </div>
-            <div class="product-item">
-                <img src="images/hoodies/images (7).jpg" alt="Hoodie 5">
-                <div class="product-info">
-                    <p class="price">R400</p>
-                    <p class="colors">Color: Black, White, Grey and other</p>
+            <div class="col-12 col-md-3 mb-4">
+                <div class="product-item">
+                    <img src="images/hoodies/1e3c2b885d63de54a324f09888c0225a.jpg" alt="Hoodie 1" class="img-fluid">
+                    <div class="product-info">
+                        <p class="price">R400</p>
+                        <p class="colors">Color: Black, White, Grey and other</p>
+                    </div>
                 </div>
             </div>
-            <div class="product-item">
-                <img src="images/hoodies/images (5).jpg" alt="Hoodie 5">
-                <div class="product-info">
-                    <p class="price">R400</p>
-                    <p class="colors">Color: Black, White, Grey and other</p>
-                </div>
-            </div>
-            <div class="product-item">
-                <img src="images/hoodies/download.jpg" alt="Hoodie 5">
-                <div class="product-info">
-                    <p class="price">R400</p>
-                    <p class="colors">Color: Black, White, Grey and other</p>
-                </div>
-            </div>
-            <div class="product-item">
-                <img src="images/hoodies/images (6).jpg" alt="Hoodie 5">
-                <div class="product-info">
-                    <p class="price">R400</p>
-                    <p class="colors">Color: Black, White, Grey and other</p>
+            <div class="col-12 col-md-3 mb-4">
+                <div class="product-item">
+                    <img src="images/hoodies/1e3c2b885d63de54a324f09888c0225a.jpg" alt="Hoodie 1" class="img-fluid">
+                    <div class="product-info">
+                        <p class="price">R400</p>
+                        <p class="colors">Color: Black, White, Grey and other</p>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <br><br><br><br><br><br>
 
         <!-- Sweater Products Section -->
-        <div class="watermark-container sweater-watermark">
-            <img src="/images/background/2373db9b4d3bd775af0612ed4926905d.jpg" alt="Sweater Watermark">
+        <div class="watermark-container mb-23">
+            <img src="/images/background/2373db9b4d3bd775af0612ed4926905d.jpg" alt="Featured Watermark" class="img-fluid">
         </div>
-        <h2 class="heading">Hoodie Sweaters</h2>
-        <br><br><br>
-        <div class="product-grid">
-            <div class="product-item">
-                <img src="images/hoodie sweater/sweater4.jpg" alt="Sweater 1">
-                <div class="product-info">
-                    <p class="price">R450</p>
-                    <p class="colors">Color: Black, White, Grey</p>
+        <h2 class="heading text-center mb-10">Sweater Hoodies</h2>
+        <div class="row">
+            <div class="col-12 col-md-3 mb-4">
+                <div class="product-item">
+                    <img src="images/hoodie sweater/sweater4.jpg" alt="Sweater 1" class="img-fluid">
+                    <div class="product-info">
+                        <p class="price">R450</p>
+                        <p class="colors">Color: Black, White, Grey</p>
+                    </div>
                 </div>
             </div>
-            <div class="product-item">
-                <img src="images//hoodie sweater/images.jpg" alt="Sweater 2">
-                <div class="product-info">
-                    <p class="price">R450</p>
-                    <p class="colors">Color: Black, White, Grey</p>
+            <div class="col-12 col-md-3 mb-4">
+                <div class="product-item">
+                    <img src="images/hoodie sweater/sweater4.jpg" alt="Sweater 1" class="img-fluid">
+                    <div class="product-info">
+                        <p class="price">R450</p>
+                        <p class="colors">Color: Black, White, Grey</p>
+                    </div>
                 </div>
             </div>
-            <div class="product-item">
-                <img src="images/hoodie sweater/images (3).jpg" alt="Sweater 3">
-                <div class="product-info">
-                    <p class="price">R450</p>
-                    <p class="colors">Color: Black, White, Grey</p>
+            <div class="col-12 col-md-3 mb-4">
+                <div class="product-item">
+                    <img src="images/hoodie sweater/sweater4.jpg" alt="Sweater 1" class="img-fluid">
+                    <div class="product-info">
+                        <p class="price">R450</p>
+                        <p class="colors">Color: Black, White, Grey</p>
+                    </div>
                 </div>
             </div>
-            <div class="product-item">
-                <img src="images/hoodie sweater/sweater2.gif" alt="Sweater 4">
-                <div class="product-info">
-                    <p class="price">R450</p>
-                    <p class="colors">Color: Black, White, Grey</p>
-                </div>
-            </div>
-            <div class="product-item">
-                <img src="images/hoodie sweater/68a7666696a707f63f3128ddd16848c6.jpg" alt="Sweater 5">
-                <div class="product-info">
-                    <p class="price">R450</p>
-                    <p class="colors">Color: Black, White, Grey</p>
+            <div class="col-12 col-md-3 mb-4">
+                <div class="product-item">
+                    <img src="images/hoodie sweater/sweater4.jpg" alt="Sweater 1" class="img-fluid">
+                    <div class="product-info">
+                        <p class="price">R450</p>
+                        <p class="colors">Color: Black, White, Grey</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -220,82 +215,90 @@
 </section>
 
 
- <!-- about section -->
- <section id="about" class="about" class="about-section">
-    
-    <div class="about-content">
-        <img src="images/background/6b6c6c03f772d82fe1cdd5a0cdc9cf51.jpg" alt="Anime Characters" class="left-image">
-        <div class="text-content">
-            <h2 class="heading">About Izzy Studio</h2>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            <p>At Izzy Studio, we bring your favorite anime characters to life through high-quality printed shirts, hoodies, and sweater hoodies. Whether you're a die-hard fan or a casual enthusiast, our unique designs are crafted to help you express your love for anime in style.</p>
-            <br><br>
-            <p>Our mission is to create apparel that not only looks amazing but also resonates with the vibrant anime community. From iconic classics to trending series, we've got something for everyone.</p>
+<!-- about section -->
+<section id="about" class="about py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Left Image -->
+            <div class="col-12 col-md-5 mb-4 mb-md-0">
+                <img src="images/background/6b6c6c03f772d82fe1cdd5a0cdc9cf51.jpg" alt="Anime Characters" class="img-fluid rounded">
+            </div>
+            <!-- Text Content -->
+            <div class="col-12 col-md-4">
+                <h2 class="heading">About Izzy Studio</h2>
+                <p>At Izzy Studio, we bring your favorite anime characters to life through high-quality printed shirts, hoodies, and sweater hoodies. Whether you're a die-hard fan or a casual enthusiast, our unique designs are crafted to help you express your love for anime in style.</p>
+                <br>
+                <p>Our mission is to create apparel that not only looks amazing but also resonates with the vibrant anime community. From iconic classics to trending series, we've got something for everyone.</p>
+            </div>
+            <!-- Right Image -->
+            <div class="col-12 col-md-3 mt-4 mt-md-0">
+                <img src="images/background/deku.jpg" alt="Anime Characters" class="img-fluid rounded">
+            </div>
         </div>
-          <img src="images/background/deku.jpg" alt="Anime Characters" class="right-image">
-          <br><br><br><br>
     </div>
 </section>
+
+
 
 <!-- Contact Section -->
-<section class="contact" id="contact">
-    <div class="contact-container">
-        <h2 class="heading">Contact Us</h2>
-        
-        <!-- Contact Form and Image Container -->
-        <div class="contact-content">
-            <!-- Contact Form -->
-            <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
-                <div class="form-group">
-                    <input type="hidden" name="access_key" value="adf56a2e-2785-4f78-9408-4b709112061c">
-                    <label for="first-name">First Name</label>
-                    <input type="text" id="first-name" name="first-name" placeholder="Your First Name" required>
-                </div>
+<section class="contact py-5" id="contact">
+    <div class="container">
+        <h2 class="heading text-center mb-4">Contact Us</h2>
+        <div class="row">
+            <div class="col-12 col-md-6 mb-4">
+                <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                    <div class="form-group">
+                        <input type="hidden" name="access_key" value="adf56a2e-2785-4f78-9408-4b709112061c">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" name="first-name" class="form-control" placeholder="Your First Name" required>
+                    </div>
 
-                <div class="form-group">
-                    <label for="last-name">Last Name</label>
-                    <input type="text" id="last-name" name="last-name" placeholder="Your Last Name" required>
-                </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" name="last-name" class="form-control" placeholder="Your Last Name" required>
+                    </div>
 
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
-                </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="form-control" placeholder="Your Phone Number" required>
+                    </div>
 
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="Your Email" required>
-                </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Your Email" required>
+                    </div>
 
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="Place Your Order Here or Contact Us on Whatsapp" rows="5" required></textarea>
-                </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" class="form-control" placeholder="Place Your Order Here or Contact Us on Whatsapp" rows="5" required></textarea>
+                    </div>
 
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
-            <div class="contact-image">
-                <img src="images/background/dgfwzzo-fba75407-44b4-4180-8eb7-71034921e5f0.png" alt="Contact Image">
+                    <button type="submit" class="btn btn-primary mt-3">Send Message</button>
+                </form>
+            </div>
+            <div class="col-12 col-md-6 mb-4">
+                <img src="images/background/b02cdd30ee7a09a771a1628141b89a3f.jpg" alt="Contact Image" class="img-fluid">
             </div>
         </div>
     </div>
 </section>
 
-
 <!-- Footer Section -->
-<footer>
-  <div class="footer-container">
-      <p>&copy; 2025 Izzy Tlhakudi All rights reserved.</p>
+<footer class="bg-dark text-white py-4">
+  <div class="container text-center">
+      <p>&copy; 2025 Designed by Isabela Tlhakudi All rights reserved.</p>
       <div class="social-icons">
-        <a href="https://www.facebook.com/isabela.tlhakudi" target="_blank" class="social-icon"><i class='bx bxl-facebook'></i></a>
-        <a href="https://twitter.com/shortgun94" target="_blank" class="social-icon"><i class='bx bxl-twitter'></i></a>
-        <a href="https://instagram.com/bellahshotz?igshid=NGExMmI2YTkyZg==" target="_blank" class="social-icon"><i class='bx bxl-instagram' ></i></a>
-        <a href="https://wa.me/0632390038" target="_blank" class="social-icon"><i class='bx bxl-whatsapp' ></i></a>
+        <a href="https://www.facebook.com/isabela.tlhakudi" target="_blank" class="social-icon text-white mx-2"><i class='bx bxl-facebook'></i></a>
+        <a href="https://twitter.com/shortgun94" target="_blank" class="social-icon text-white mx-2"><i class='bx bxl-twitter'></i></a>
+        <a href="https://instagram.com/bellahshotz?igshid=NGExMmI2YTkyZg==" target="_blank" class="social-icon text-white mx-2"><i class='bx bxl-instagram'></i></a>
+        <a href="https://wa.me/0632390038" target="_blank" class="social-icon text-white mx-2"><i class='bx bxl-whatsapp'></i></a>
       </div>
   </div>
 </footer>
 
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="Javascript/script.js"></script>
+<!-- Bootstrap JS and other scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="Javascript/script.js"></script>
 </body>
 </html>

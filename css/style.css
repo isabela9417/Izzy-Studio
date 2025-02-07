@@ -10,101 +10,82 @@ body {
     max-width: 960px;
     margin: 0 auto;
     padding: 0 20px;
+    position: relative;
 }
-
-header {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px 0;
-    position: fixed; 
+.header{
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%; 
-    z-index: 100;
-    transition: backdrop-filter 0.3s ease; 
-    
+    width: 100%;
+    padding: 2rem 7%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    transition: .5s;
+}
+.header.sticky {
+    position: fixed;
+    box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1);
+    padding: 2rem 2;
+    backdrop-filter: blur(10px);
+    /* animation: slideDown 0.35s ease-out; */
+}
+.header.sticky .logo{
+    color: #333;
+    font-size: 1.7rem;
+
+}
+.header.sticky .navBar a{
+    position: relative;
+    font-size: 1.7rem;
+    color: var(--text-color);
+    font-weight: 600;
+    margin-right: 3.5rem;
+}
+
+.header.sticky .navBar a.active{
+    color: #87CEEB;
 }
 
 
-header.scrolled {
-    backdrop-filter: blur(5px); 
+.header.sticky .navBar a::before{
+    background: var(--main-color);
+    opacity: .7;
+}
 
+.logo{
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 600;
+    cursor: default;
+    margin-right: auto;
+}
+
+.navBar a{
+    position: relative;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 500;
+    margin-right: 3.5rem;
+}
+
+.navBar a.active::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: .2rem;
+    background: rgb(106, 106, 240);
 }
 
 #menu-icon {
-    font-size: 2.6rem;
+    font-size: 3.6rem;
     color: var(--text-color);
     display: none;
-    cursor: pointer;
 }
 
-.logo {
-    float: left;
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.navBar {
-    display: flex;
-    justify-content: flex-end;
-    transition: transform 0.3s ease-in-out;
-}
-
-.navBar ul {
-    display: flex;
-    gap: 20px;
-}
-
-.navBar.active {
-    display: block;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    padding: 20px 0;
-}
-
-.navBar.active ul {
-    display: block;
-    text-align: center;
-}
-
-.navBar.active ul li {
-    margin: 10px 0;
-}
-
-.navBar.active ul li a {
-    font-size: 1.5rem;
-    color: #333;
-}
-
-nav {
-    float: right;
-    display: block;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline-block;
-    margin-left: 20px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #333;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: #007bff;
-}
 
 /* Home Section Styles */
 .home {
@@ -272,40 +253,39 @@ nav a:hover {
   margin-left: 200px; 
 }
 
-.about-section {
+/* .about-section {
   text-align: center;
   justify-content: center;
-}
+} */
 
 .about-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
 }
 
-.about .heading{
+
+.about .heading {
     font-size: 2.5rem;
     font-weight: bold;
     color: #333;
     margin-bottom: 30px;
-    justify-content: center;
+    text-align: center;
 }
-
 
 .left-image {
   width: 40%; 
-  border-radius: 8px;
-  margin-right: 20px;
-  padding-top: 25rem;
+  margin-right: 2rem;
+  padding-top: 5rem;
   
 }
 
-.right-image{
-    width: 40%; 
-    border-radius: 8px;
-    margin-right: 20px;
+.right-image {
+    width: 40%;
+    margin-right: 2rem;
+    margin-top: 5rem; 
 }
+
 .text-content {
   width: 55%; 
   text-align: left;
@@ -326,7 +306,6 @@ nav a:hover {
   border-radius: 8px;
   margin-top: 10px;
 }
-
 
 /* Contact Section Styling */
 .contact {
@@ -453,228 +432,54 @@ footer p {
     font-size: 2rem;
 }
 
-.social-icon {
-    font-size: 30px;
-    color: #fff;
-    transition: color 0.3s ease;
-    text-decoration: none;
-}
-
-.social-icon:hover {
+.social-icons:hover {
     color: #007bff;
 }
 
+.no-padding-image {
+    margin-bottom: 0 !important;  
+    padding-bottom: 0 !important; 
+}
 
-/* Media Queries for Responsiveness */
+footer {
+    margin-top: 0 !important; 
+    padding-top: 0 !important; 
+}
 
-@media screen and (max-width: 768px) {
-    header {
-        padding: 15px 0;
-        flex-direction: column; 
-        align-items: center; 
+
+
+
+/* Responsive Design - Mobile View */
+@media (max-width: 768px) {
+    
+    .navBar ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px; 
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        padding: 20px 0;
+        text-align: center;
+        color: black;
     }
-
-    .logo {
-        margin: 10px 0; 
-        text-align: center; 
+    nav .navBar{
+        display: none;
     }
-
+    
     #menu-icon {
-        margin: 10px 0; 
-        font-size: 2rem; 
+        display: block;
     }
 
-    .navBar {
-        width: 100%; 
-    }
-
-    .navBar.active {
-        top: 65px; 
-        left: 0;
-        text-align: center; 
-        padding: 10px 0; 
-    }
 
     .navBar.active ul {
-        display: block;
+        display: flex;
     }
 
-    .navBar.active ul li {
-        margin: 10px 0;
-    }
-
-    .navBar.active ul li a {
-        font-size: 1.2rem;
-    }
-    .contact-content {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .product-grid {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    }
-
-    .product-container {
-        padding: 0 10px;
-    }
-
-    .about-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .left-image,
-    .right-image {
-        width: 80%;
-        margin: 10px 0;
-    }
-
-    .footer-container {
-        padding: 0 20px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    header {
-        padding: 10px 0;
-    }
-
-    .logo {
-        font-size: 18px;
-    }
-
-    .product .heading,
-    .contact .heading,
-    .about .heading {
-        font-size: 2rem;
-    }
-
-    .navBar.active {
-        top: 95px; /* Adjust top position */
-    }
-
-    nav ul {
-        text-align: center;
-    }
-
-    nav ul li {
-        display: block;
-        margin-left: 0;
-        margin-top: 10px;
-    }
-
-    /* Contact Form */
-    .contact-form {
-        padding: 2rem;
-    }
-
-    .contact-form label {
-        font-size: 1rem;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-        padding: 8px;
-    }
-
-    .contact-form button {
-        font-size: 1rem;
-        padding: 8px 16px;
-    }
-
-    .product-info {
-        font-size: 1rem;
-    }
-}@media screen and (max-width: 768px) {
-
-    header {
-        padding: 15px 0;
-    }
-
-    .logo {
-        font-size: 20px;
-        padding-right: 10px;
-    }
-    nav {
-        display: none; 
-    }
-
-    #menu-icon {
-        display: block;
-    }
-
-    .contact-content {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .product-grid {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
-    }
-
-    .product-container {
-        padding: 0 10px;
-    }
-
-    .about-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .left-image, .right-image {
-        width: 80%; 
-        margin: 10px 0;
-    }
-
-    .footer-container {
-        padding: 0 20px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-
-    header {
-        padding: 10px 0;
-    }
-
-    .logo {
-        font-size: 18px;
-    }
-
-    .product .heading, .contact .heading, .about .heading {
-        font-size: 2rem;
-    }
-
-    nav ul {
-        text-align: center;
-    }
-
-    nav ul li {
-        display: block;
-        margin-left: 0;
-        margin-top: 10px;
-    }
-
-    /* Contact Form */
-    .contact-form {
-        padding: 2rem;
-    }
-
-    .contact-form label {
-        font-size: 1rem;
-    }
-
-    .contact-form input, .contact-form textarea {
-        padding: 8px;
-    }
-
-    .contact-form button {
-        font-size: 1rem;
-        padding: 8px 16px;
-    }
-
-    .product-info {
-        font-size: 1rem;
+    
+    .menu-icon.open i {
+        content: "\f00d"; 
     }
 }
