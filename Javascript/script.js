@@ -17,14 +17,6 @@ function showSlides() {
 }
 showSlides();
 
-// 
-var menuIcon = document.querySelector("#menu-icon");
-var navBar = document.querySelector(".navBar");
-
-menuIcon.onclick = () => {
-  menuIcon.classList.toggle("bx-x");
-  navBar.classList.toggle("active");
-};
 
 /*====================== scroll section active link ==========================*/
 var sections = document.querySelectorAll("section");
